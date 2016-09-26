@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "109342132691",
+    "firebase_url": "https://ichor-6536c.firebaseio.com",
+    "project_id": "ichor-6536c",
+    "storage_bucket": "ichor-6536c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109342132691:android:f175ee62ea9124fc",
+        "android_client_info": {
+          "package_name": "com.example.shobhit.ichor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109342132691-utfr8srimp2qq22o06ct49baso4klroe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shobhit.ichor",
+            "certificate_hash": "BDB81F22B0865FB1831692C7EB9D5768CEB06F39"
+          }
+        },
+        {
+          "client_id": "109342132691-3b846ab8tomlfu21jujtgduu4lah7tmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8pNj7Vrb7blg9TgP7uw6IJYXhGmBtTrg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109342132691-3b846ab8tomlfu21jujtgduu4lah7tmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
