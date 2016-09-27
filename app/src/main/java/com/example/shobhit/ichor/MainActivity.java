@@ -5,15 +5,19 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ProgressBar;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
+
+
 public class MainActivity extends AppCompatActivity {
 
-    public Button btnLogout;
+
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private ProgressBar progressBar;
@@ -24,17 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Button
-        btnLogout=(Button)findViewById(R.id.button6);
+
 
         //Progress Bar
         progressBar=(ProgressBar)findViewById(R.id.progressBar4);
 
+
         //Firebase Instance
         auth = FirebaseAuth.getInstance();
 
-        //get current user
-        final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -46,21 +48,20 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
                     finish();
             }
+                else {
+                    //go to final activity of the user
+                    startActivity(new Intent(MainActivity.this,FinalActivity.class));
+                    finish();
+
+                }
         }
     };
 
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-            }
-        });
+
+
 
     }//onCreate ends
-        //sign out method
-        public void signOut() {
-            auth.signOut();
-        }
+
 
         @Override
         protected void onResume() {

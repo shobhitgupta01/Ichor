@@ -11,10 +11,11 @@ import java.util.Map;
 
 public class User {
 
-    String name;
-    String bloodGroup;
-    String contact;
-    Boolean canDonate;
+    public String name;
+    public String bloodGroup;
+    public String contact;
+    public Boolean canDonate;
+
 
     User()
     {
@@ -23,15 +24,17 @@ public class User {
 
     User(String name , String bloodGroup, String contact)
     {
+
         this.name=name;
         this.bloodGroup=bloodGroup;
         this.contact=contact;
-        this.canDonate=false;
+        this.canDonate=true;
     }
 
-    @Exclude
+   /* @Exclude
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
+        result.put("userId", userId);
         result.put("name", name);
         result.put("bloodGroup", bloodGroup);
         result.put("contact",contact);
@@ -39,5 +42,5 @@ public class User {
 
         return result;
     }
-
+    */
 }

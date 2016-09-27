@@ -12,64 +12,75 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="89dp"
         android:id="@+id/editText5"
-        android:hint="Enter Name" />
+        android:hint="Enter Name"
+        android:background="?attr/colorButtonNormal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:hint="Phone Number"
+        android:background="?attr/colorButtonNormal"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Select Blood Group"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/textView3"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:background="@android:color/white"
+        android:textAlignment="gravity"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="User Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/editText5"
-        android:layout_marginEnd="37dp"
         android:layout_marginTop="22dp"
         android:id="@+id/textView2"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:layout_below="@+id/editText5"
-        android:layout_alignStart="@+id/editText5"
-        android:layout_marginTop="18dp"
-        android:id="@+id/editText6"
-        android:hint="Phone Number" />
-
-    <TextView
-        android:text="Select Blood Group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textAppearance="@android:style/TextAppearance.Material.Medium"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/editText6" />
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.WindowTitle"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp" />
 
     <Spinner
         android:layout_width="90dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/spinner"
         android:entries="@array/blood_groups"
         android:minWidth="50dp"
-        android:layout_alignTop="@+id/textView3"
+        android:background="?attr/colorButtonNormal"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="45dp" />
+        android:textAlignment="center" />
 
     <Button
         android:text="Proceed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
-        android:layout_marginTop="67dp"
         android:id="@+id/button8"
+        android:background="@color/colorPrimary"
+        android:elevation="10dp"
+        android:textColor="@android:color/white"
         android:layout_below="@+id/spinner"
-        android:layout_toStartOf="@+id/spinner" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="55dp"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

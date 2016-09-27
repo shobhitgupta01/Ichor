@@ -26,11 +26,15 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+
     //firebase authentication
     compile 'com.google.firebase:firebase-auth:9.6.0'
 
     //firebase database
     compile 'com.google.firebase:firebase-database:9.6.0'
+
+    //google play services
+    compile 'com.google.android.gms:play-services:9.6.0'
 
 }
 

@@ -10,28 +10,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.shobhit.ichor.SignUpActivity">
+    tools:context="com.example.shobhit.ichor.SignUpActivity"
+    android:background="@color/cast_expanded_controller_text_color">
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:inputType="textPassword"
         android:ems="10"
         android:layout_marginTop="37dp"
         android:id="@+id/editText2"
         android:hint="Password"
         android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
-
-    <TextView
-        android:text="Sign Up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button2"
-        android:layout_marginTop="33dp"
-        android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_alignStart="@+id/editText"
+        android:background="?attr/colorButtonNormal"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="Register"
@@ -40,11 +33,14 @@
         android:layout_marginTop="36dp"
         android:id="@+id/button2"
         android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true" />
+        android:background="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:layout_marginTop="38dp"
@@ -52,7 +48,9 @@
         android:hint="Email"
         android:singleLine="false"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:background="?attr/colorButtonNormal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <ProgressBar
         style="?android:attr/progressBarStyle"
@@ -71,9 +69,21 @@
 
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
         android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         style="@style/Widget.AppCompat.Button.Borderless"
-        />
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Sign Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/progressBar2" />
 
 </RelativeLayout>

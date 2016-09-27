@@ -10,32 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.shobhit.ichor.MainActivity">
 
-    <TextView
-        android:text="Welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="63dp"
-        android:id="@+id/textView5"
-        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
-
-    <Button
-        android:text="Logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_marginTop="56dp"
-        android:id="@+id/button6" />
 
     <ProgressBar
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/progressBar4"
         android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/textView5"
-        android:layout_marginBottom="26dp"
-        android:id="@+id/progressBar4" />
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

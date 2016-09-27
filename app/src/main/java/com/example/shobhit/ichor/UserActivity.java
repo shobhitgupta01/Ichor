@@ -4,16 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
-import java.util.Map;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -21,6 +22,9 @@ public class UserActivity extends AppCompatActivity {
     Button btnProceed;
     Spinner spinner;
     DatabaseReference root;
+
+    String bloodGroup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +41,30 @@ public class UserActivity extends AppCompatActivity {
         //Spinner
         spinner=(Spinner)findViewById(R.id.spinner);
 
+
+
+
+
+        //bloodGroup
+        bloodGroup = spinner.getSelectedItem().toString();
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                bloodGroup = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                bloodGroup = parent.getItemAtPosition(0).toString();
+            }
+        });
+
+
+
         //initialising the database instance
         root= FirebaseDatabase.getInstance().getReference().getRoot();
+
 
         btnProceed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,17 +74,23 @@ public class UserActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(),"Enter the details!",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    User user = new User(inputName.getText().toString(),spinner.getSelectedItem().toString(),inputPhone.getText().toString());
-                    String key = root.push().getKey();
-                    Map<String, Object> userData = user.toMap();
+
+                    final String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                    User user = new User(inputName.getText().toString(),bloodGroup,inputPhone.getText().toString());
+
+                   /* Map<String, Object> userData = user.toMap();
 
                     Map<String, Object> childUpdates = new HashMap<>();
-                    childUpdates.put("/users/"+key,userData);
+                    childUpdates.put(userData);
+                    */
 
-                    root.updateChildren(childUpdates);
+                    //adding the data in the users node
+                    root.child("users").child(userId).setValue(user);
 
-
+                    root.child("bloodGroups").child(bloodGroup).child(userId).setValue(userId);
                     startActivity(new Intent(UserActivity.this,MainActivity.class));
+
                 }
             }
         });

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
@@ -9,40 +10,34 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.shobhit.ichor.LoginActivity">
+    tools:context="com.example.shobhit.ichor.LoginActivity"
+    android:background="@drawable/mr_dialog_material_background_light">
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="36dp"
         android:layout_marginTop="68dp"
         android:id="@+id/editText3"
-        android:hint="Email" />
+        android:hint="Email"
+        android:background="?android:attr/colorButtonNormal"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="40dp" />
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:inputType="textPassword"
         android:ems="10"
         android:layout_below="@+id/editText3"
         android:layout_alignStart="@+id/editText3"
         android:layout_marginTop="36dp"
         android:id="@+id/editText4"
-        android:hint="Password" />
-
-    <TextView
-        android:text="Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button3"
-        android:layout_marginTop="29dp"
-        android:id="@+id/textView4"
-        />
+        android:hint="Password"
+        android:background="?attr/colorButtonNormal"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="Login"
@@ -50,27 +45,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/button3"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Forgot Password?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="New User? Click here to sign up."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:id="@+id/button5"
-        android:layout_below="@+id/button4"
-        android:layout_alignStart="@+id/editText4"
-        android:layout_marginStart="23dp"
-        style="@style/Widget.AppCompat.Button.Borderless" />
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <ProgressBar
         style="?android:attr/progressBarStyle"
@@ -79,5 +57,30 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/progressBar3" />
+
+    <Button
+        android:text="New User? Click here to sign up."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:id="@+id/button5"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_below="@+id/button3"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/textView4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:capitalize="characters"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/progressBar3" />
 
 </RelativeLayout>

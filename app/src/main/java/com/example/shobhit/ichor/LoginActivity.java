@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText inputEmail,inputPassword;
-    public Button btnLogin,btnReset,btnSignup;
+    public Button btnLogin,btnSignup;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
 
@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //Button
         btnLogin=(Button)findViewById(R.id.button3);
-        btnReset=(Button)findViewById(R.id.button4);
+        //btnReset=(Button)findViewById(R.id.button4);
         btnSignup=(Button)findViewById(R.id.button5);
 
         //Progress Bar
